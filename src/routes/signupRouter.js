@@ -18,6 +18,28 @@ function router(navbarinvalid){
          login.save();
          res.redirect('/login');
     })
+
+    signupRouter.post('/validate',(req,res)=>{
+            var email = req.body.email ;
+            var password = req.body.password;
+         Logindata.findOne({$and:[{email:email},{password:password}]}).then((user)=>{
+            //  console.log(user.type)
+             if (user != null){
+                console.log(user.type)
+                if(user.type==="admin"){
+                    res.redirect('/index');
+                }
+                else if(user.type==="student"){
+                    res.redirect('/student');
+                }
+            }
+             else{
+                res.send("Account does'nt' exists! Create an account")
+             }
+        });
+        // res.send("kitti")
+    })
+    
     return signupRouter;
 }
 module.exports = router;
