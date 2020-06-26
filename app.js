@@ -1,7 +1,7 @@
 const express = require('express');
 const app = new express();
 const navbarinvalid =[{link:'/login',name:'Home'},{link:'/login',name:'Login'},{link:'/signup',name:'Signup'}]
-const nav = [{link:'/index',name:'Home'},{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/addBook',name:'Add Books'},{link:'/addauthor',name:'Add Author'}]
+const nav = [{link:'/index',name:'Home'},{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/addBook',name:'Add Books'},{link:'/addauthor',name:'Add Author'},{link:'/',name:'Log Out'}]
 const booksRouter = require('./src/routes/booksRouter')(nav);
 const authorsRouter = require('./src/routes/authorsRouter')(nav);
 const studentRouter = require('./src/routes/studentRouter');

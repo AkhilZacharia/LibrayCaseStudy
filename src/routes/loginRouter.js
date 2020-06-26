@@ -4,6 +4,9 @@ function router(navbarinvalid){
     loginRouter.get('/',(req,res)=>{
         res.render('login',{navbarinvalid,success:"/signup/validate"})
     })
+    loginRouter.get('/denied',(req,res)=>{
+        res.render('terminator',{navbarinvalid})
+    })
     
 
     return loginRouter;

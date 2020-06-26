@@ -34,7 +34,8 @@ function router(navbarinvalid){
                 }
             }
              else{
-                res.send("Account does'nt' exists! Create an account")
+                res.redirect('/login/denied');
+                //res.send("Account does'nt' exists! Create an account")
              }
         });
         // res.send("kitti")

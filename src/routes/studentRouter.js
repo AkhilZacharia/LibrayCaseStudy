@@ -1,6 +1,6 @@
 const express = require('express');
 const studentRouter = express.Router();
-const nav = [{link:'/student',name:'Home'},{link:'/student/books',name:'Books'},{link:'/student/authors',name:'Authors'}]
+const nav = [{link:'/student',name:'Home'},{link:'/student/books',name:'Books'},{link:'/student/authors',name:'Authors'},{link:'/',name:'Log Out'}]
 const Bookdata = require('../model/bookdata');
 const Authordata = require('../model/authordata');
 const navlink = [{link:'/student/books/:id'}]
