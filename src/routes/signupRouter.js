@@ -23,7 +23,6 @@ function router(navbarinvalid){
             var email = req.body.email ;
             var password = req.body.password;
          Logindata.findOne({$and:[{email:email},{password:password}]}).then((user)=>{
-            //  console.log(user.type)
              if (user != null){
                 console.log(user.type)
                 if(user.type==="admin"){
@@ -38,7 +37,6 @@ function router(navbarinvalid){
                 //res.send("Account does'nt' exists! Create an account")
              }
         });
-        // res.send("kitti")
     })
     
     return signupRouter;
