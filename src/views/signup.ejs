@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP</title>
+    <link rel="stylesheet" href="/css/signUpStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="bdy">
+        <div id="headerBox">
+            <nav class="navbar navbar-expand-lg navbar-light " style="padding-left: 7%;">
+              <!-- <a class="" href="#">HOME</a>
+              <a class="" href="./login.html">LOGIN</a>
+              <a class="" href="./signup.html">SIGNUP</a> -->
+              <%for(i=0;i<navbarinvalid.length;i++){%>
+                <li>
+                  <a href="<%=navbarinvalid[i].link%>"><%=navbarinvalid[i].name%></a>
+                </li>
+                <li>
+                  <%}%>
+            </nav>
+        </div>
+        <div id="secondBox">
+            
+            <h1>Library</h1>
+        </div>
+    </div>
+    <div id="topBox" style="z-index: 2;">
+        <h1>Create your account</h1>
+        <form onsubmit="return !!(nameCheck()&phoneValid()&passTest()&confirmPass()&pinCheck());" method="POST" action="/signup/add" >
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <h2>Watch,Listen and Learn new things...</h2>
+                    <label for="userName">Name</label>
+                    <input type="text" class="form-control" id="userName" name="username" placeholder="Atleast 5 Characters" onchange="nameCheck()" required >
+                  </div>
+            </div>
+             <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label for="inputEmail4">Email</label>
+                  <input type="email" class="form-control" name="email" id="inputEmail4" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="phoneNo">PhoneNo</label>
+                    <input type="number" class="form-control" name="phonenumber" id="phoneNo" onchange="phoneValid()" required>
+                  </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="type">Login Privilage</label>
+                <select id="type" name="type" class="form-control" required>
+                  <option value="student" selected>student</option>
+                  <option value="admin">admin</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" name="password" id="inputPassword4" onchange="passTest()" required>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" onchange="confirmPass()" required>
+              </div>
+            </div>
+           <div class="form-group col-md-5">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" name="address" id="inputAddress" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" name="city" id="inputCity" required>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputState">State</label>
+                <select id="inputState" name="state" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>Kerala</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputPin">Pin Code</label>
+                <input type="number" class="form-control" name="pin" id="inputPin" onchange="pinCheck()" required>
+              </div>
+            </div>
+            <div class="form-row">
+                <h6>Gender: </h6>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked >
+                    <label class="form-check-label" for="inlineRadio1">male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">female</label>
+                  </div>
+                  <label for="dob">Date of Birth : </label>
+
+                  <input type="date" id="dob" name="dob"
+                        value="2020-05-25"
+                        min="1990-01-01" max="2010-12-31">
+            </div>
+                 
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </form>
+    </div>
+    <nav class="fixed-bottom bottomNav" style="background: none;z-index: 0;">
+        <h4 class="" href="#">Follow Us</h4>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" style="background-color: #3c96fd;">Twitter</button>
+            <button type="button" class="btn btn-secondary" style="background-color: #3a589b;">Facebook</button>
+            <button type="button" class="btn btn-secondary" style="background-color: #c54332;">Google+</button>
+        </div>
+      </nav>
+<script src="/js/signupScript.js"></script>
+</body>
+</html>

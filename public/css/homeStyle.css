@@ -1,0 +1,120 @@
+body{
+    margin: 0px;
+}
+
+#bdy{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    position: fixed;
+    background-color: #efefef;
+}
+#headerBox{
+    height: auto;
+    background: none;
+}
+
+#secondBox{
+    padding-top: 30px;
+    padding-left: 8%;
+    height: 160px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    color:  #fefeff;
+    background-color: #000044;
+}body{
+    margin: 0px;
+}
+
+#bdy{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    position: fixed;
+    background-color: #efefef;
+}
+#headerBox{
+    height: auto;
+    background: none;
+}
+
+#secondBox{
+    padding-top: 30px;
+    padding-left: 8%;
+    height: 160px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    color:  #fefeff;
+    background-color: #000044;
+}
+#topBox{
+    margin: 150px 8% 10% 8%;
+    height: auto;
+    width: 83%;
+    background-color: #ffffff;
+    position: absolute;
+    padding: 8px;
+}
+#bdy nav a{
+    padding-left: 20px;
+    text-decoration: none;
+    color: #a49cb1;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+}
+nav{
+    padding-left: 8%;
+    background-color: #111166;
+}
+img{
+    border-radius: 50%;
+    height: 2.1cm;
+    width: 2.1cm;
+}
+.books{
+    border-bottom: solid 1px rgb(194, 194, 194);
+    padding: 30px;
+    min-height: 150px;
+}
+.books h5{
+    color:  rgb(131, 129, 129);
+    font-family: 'Oswald', sans-serif;
+}
+.books div{
+    /* display: inline; */
+    float: left;
+}
+.content{
+    padding-left: 30px;
+    padding-top: 15px;
+}
+.books div a{
+    text-decoration: none;
+    background-color: #777777;
+    color: white;
+    font-size: small;
+    border-radius: 0.3em;
+    padding: 2px;
+}
+.books div p{
+    font-family: 'Trirong', serif;
+    font-size: 0.7em;
+    word-spacing: 0.3em;
+    font-weight: 500;
+    margin-top: 0.7em;
+}
+h4{
+    color:  rgb(131, 129, 129);
+    font-family: 'Oswald', sans-serif;
+}
+#topBox button{
+    background: #3674aa;
+    color: #ffffff;
+}
+.bottomNav{
+    padding-bottom: 20px;
+}
+span{
+    font-size: 3em;
+    font-weight: 900;
+}

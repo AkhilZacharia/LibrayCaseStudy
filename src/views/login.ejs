@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="/css/loginStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css" > -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <div id="bdy">
+        <div id="headerBox">
+            <nav class="navbar navbar-expand-lg navbar-light " style="padding-left: 7%;">
+              <!-- <a class="" href="#">HOME</a>
+              <a class="" href="/login">LOGIN</a>
+              <a class="" href="/signup">SIGNUP</a> -->
+              <%for(i=0;i<navbarinvalid.length;i++){%>
+                <li>
+                  <a href="<%=navbarinvalid[i].link%>"><%=navbarinvalid[i].name%></a>
+                </li>
+                <li>
+                  <%}%>
+            </nav>
+        </div>
+        <div id="secondBox">
+            
+            <h1>Library</h1>
+        </div>
+    </div>
+    <div id="topBox" style="z-index: 2;">
+        <section>
+            <div class="container border shadow-lg">
+                <div class="row ">
+                    <div class="col colLeft">
+                      <div> 
+                         <a href="#"> <img class="rounded-circle" src="/img/blur-book-stack-books-bookshelves-590493.jpg"></a>
+                      </div>
+                      <br>
+                      <h5>Library Login</h5>
+                    </div>
+                <div class="col colRight">
+                    <form method="POST" action="<%=success%>" onsubmit="return !!(emailValidation()&passTest())"  enctype="multipart/form-data">
+                         <div class="form-group">
+                              <input type="text" onchange="emailValidation()" class="form-control" id="email" placeholder="Email Id" aria-describedby="emailHelp"required>
+                         </div>
+                        <div class="form-group ">
+                              <input type="password" onchange="passTest()"  class="form-control " id="password" placeholder="Password" required>
+                         </div>
+                        <br>
+                            <button type="submit"   class="btn btn-outline-light btn-lg">  Sign In </button>
+                            <button type="button" onclick="window.location.href = '/signup';" class="btn btn-outline-light btn-lg"> Sign Up</button>
+                        <div>
+                                <br>
+                                <p>Forgot password ?</p>
+                        </div>
+                 </form>
+             </div>
+         </div>
+    </div>
+    </section>
+        
+    </div>
+    <nav class="fixed-bottom bottomNav" style="background: none;z-index: 0;">
+        <h4 class="" href="#">Follow Us</h4>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" style="background-color: #3c96fd;">Twitter</button>
+            <button type="button" class="btn btn-secondary" style="background-color: #3a589b;">Facebook</button>
+            <button type="button" class="btn btn-secondary" style="background-color: #c54332;">Google+</button>
+        </div>
+      </nav>
+      <!-- <script src="/js/bootstrap.min.js"></script> -->
+      <script src="/js/loginScript.js"></script>
+</body>
+</html>
